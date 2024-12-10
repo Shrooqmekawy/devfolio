@@ -1,0 +1,68 @@
+:root{
+    --maincolor:rgb(13, 110, 253);
+    --transition:all .3s .1s linear;
+}
+.hover:hover{
+    color: var(--maincolor) !important;
+}
+
+*{box-sizing: border-box;
+}
+#page2{
+    height:300px;
+    background-image:linear-gradient(rgba(13,110,253,.7) ,rgba(13,110,253,.7)),url(../devfolio/img/overlay-bg.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+#home::after{
+    content: "";
+      background-color: whitesmoke;
+      display: flex;
+      width: 70%;
+      height: 2px;
+      margin-top: 5px;
+      transition-property: width;
+      transition-duration: 3s;
+      transition-delay: 0.5s;
+      transition-timing-function:ease ;
+    }
+
+.after::after{
+  content: "";
+  background-color: whitesmoke;
+  display: flex;
+  margin-top: 5px;
+  width:0;
+  height: 2px;
+  color: whitesmoke;
+  transition:var(--transition)
+}
+.after:hover::after{
+    content: "";
+    width: 70%;
+}
+#page2 h1{
+    font-size: 48px;
+}
+
+.dropdown-item:hover{
+    background-color:#fff!important;
+    color: var(--maincolor) !important;
+}
+
+
+/* corsouel */
+.carousel-indicators [data-bs-target]{
+    width:10px;
+    height:10px;
+    border-radius: 50%;
+    border: 1px solid var(--maincolor);
+    background-color: white;
+
+}
+.carousel-indicators [data-bs-target]:hover{
+    background-color: var(--maincolor);
+}
+   /*corsouel  */
+
